@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion & Age Detection</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- google fonts css -->
+    <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- nav top start -->
+  <section>
+    <nav class="navbar navbar-expand navbar-fixed-top navTop">
+      <a class="navbar-brand" href="index.html">Emotion Analysis</a>
+      <button class="navbar-toggler" onclick="toggleHide()">
+          <i class="fas fa-bars"></i>
+      </button>
+      <a class="brndHide" href="index.html">Emotion Analysis</a>
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item navIcon dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-alt"></i>
+          </a>
+          <div class="dropdown-menu profileDrop" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Logout</a>    
+          </div>      
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <!-- nav top end -->
+  <!-- side menu start -->
+  <aside class="sideMenu" id="sideMnu">
+    <div class="sideBottom">
+      <ul>
+        <li>
+          <a class="aActive" href="" style="border-color: #5DC16B">
+              <i class="fas fa-palette"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="uiElmnt" onclick="uiShowHide()" id="drpwndLi">
+          <a id="brdrToggle">
+              <i class="fas fa-laptop"></i>
+            <span style="padding-right: 4.5rem;">Some Other</span>
+            <i class="fas fa-angle-right arrwRght" id="arrRght"></i>
+          </a>
+          <ul class="sideDropdwn" id="uiDrpdwn">
+            <li>
+             <a href="">
+               <i class="far fa-dot-circle"></i>
+               <span>Option One</span>
+             </a>
+            </li>
+            <li>
+             <a href="">
+               <i class="far fa-dot-circle"></i>
+               <span>Option Two</span>
+             </a>
+            </li>
+            <li>
+             <a href="">
+               <i class="far fa-dot-circle"></i>
+               <span>Option Three</span>
+             </a>
+            </li>
+            <li>
+             <a href="">
+               <i class="far fa-dot-circle"></i>
+               <span>Option Four</span>
+             </a>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="">
+              <i class="fas fa-chart-pie"></i>
+            <span>Another Option</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+              <i class="fas fa-pen-square"></i>
+            <span>More Option</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+              <i class="fas fa-table"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+              <i class="fas fa-file-alt"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- side menu end -->
+  <!-- app content -->
+  <main class="appContent" id="appcontnt">
+    <!-- options start -->
+    <div class="options-top row">
+      <ul class="list-unstyled">
+        <li>
+          <select class="form-control" name="" id="">
+            <option value="">Smart Camera</option>
+            <option value="">Another</option>
+            <option value="">Another</option>
+          </select>
+        </li>
+        <li>
+          <select class="form-control" name="" id="">
+            <option value="">All devices</option>
+            <option value="">Another</option>
+            <option value="">Another</option>
+          </select>
+        </li>
+        <li class="ml-4 mr-4">
+          <p class="mb-0">
+            LAST REFRESHED | <span>05:11:43 PM 01.01.2020</span>
+            <a href="#" class="ml-2 reload-icon"><i class="fas fa-sync"></i></a>
+          </p>
+        </li>
+        <li>
+          <select class="form-control" name="" id="">
+            <option value="">Last Hour</option>
+            <option value="">Last Day</option>
+            <option value="">Last Week</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <!-- options end -->
+    <!-- video part start -->
+    <div class="row video-part">
+      <div class="col-md-8 video">
+        <div class="inner" id="test">
+          <div id="video-frame">
+            <video id="video" height="330px" width="330px" autoplay muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 result">
+        <ul class="list-unstyled">
+          <li>
+            <div class="row align-items-center">
+              <div class="col-4">
+                <img src="./img/1.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-8 p-0 text">
+                <span>Sex: female</span> <br>
+                <span>Age: 15-19</span> <br>
+                <span>Emotion: sad</span> <br>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row align-items-center">
+              <div class="col-4">
+                <img src="./img/2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-8 p-0 text">
+                <span>Sex: female</span> <br>
+                <span>Age: 15-19</span> <br>
+                <span>Emotion: sad</span> <br>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row align-items-center">
+              <div class="col-4">
+                <img src="./img/1.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-8 p-0 text">
+                <span>Sex: female</span> <br>
+                <span>Age: 15-19</span> <br>
+                <span>Emotion: sad</span> <br>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row align-items-center">
+              <div class="col-4">
+                <img src="./img/2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-8 p-0 text">
+                <span>Sex: female</span> <br>
+                <span>Age: 15-19</span> <br>
+                <span>Emotion: sad</span> <br>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- video part end -->
+  </main>
+
+  <!-- jquery js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- face detection -->
+  <script src="js/face-api.min.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>

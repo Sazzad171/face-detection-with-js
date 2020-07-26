@@ -1,0 +1,239 @@
+body {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+/* navtop */
+.navTop {
+  background-image: linear-gradient(to right, #5EC26B , #018A7B);
+  color: #fff;
+  max-height: 56px;
+  padding-left: 0px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.navTop ul {
+  margin-right: 1rem;
+}
+.navTop a {
+  color: #fff;
+}
+.navbar-brand {
+  font-family: 'Niconne', cursive;
+  font-size: 28px;
+  width: 230px;
+  text-align: center;
+  height: 56px;
+  z-index: 1;
+}
+.brndHide {
+  font-family: 'Niconne', cursive;
+  font-size: 28px;
+  display: none;
+}
+.brndHide:hover {
+  text-decoration: none;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.navIcon i {
+  font-size: 19px;
+  margin-left: 12px;
+}
+.navbar-toggler {
+  display: block !important;
+  margin-right: 1rem;
+}
+.navbar-toggler i {color: #fff;}
+.profileDrop, .bellDrop {
+  top: 109%;
+  right: 0;
+  left: auto;
+  box-shadow: 0px 1px 5px 1px #c1c1c1;
+}
+.profileDrop a {
+  color: #16181B;
+}
+/* side navbar start */
+.sideMenu {
+  width: 0px;
+  z-index: 1;
+  background: #113937;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  padding-top: 70px;
+  overflow: auto;
+  transition: left 0.3s ease,
+  width 0.3s ease;
+  box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+}
+.sideMenu::-webkit-scrollbar {
+  width: 0;
+}
+.sideBottom a {
+  color: #fff;
+}
+.sideBottom ul {
+  list-style: none;
+  padding-left: 0;
+}
+.sideBottom a {
+  text-decoration: none;
+  border-left: 3px solid #113937;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 1.03em;
+}
+.sideBottom .arrwRght {
+  width: 0;
+}
+.sideDropdwn {
+  background: #1b4c4a;
+}
+.sideDropdwn a {
+  border: none;
+}
+#uiDrpdwn {
+  display: none;
+}
+.uiElmnt {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#brdrToggle:hover {
+  color: #fff;
+}
+.sideBottom a i {
+  width: 25px;
+  flex: 0 0 auto;
+}
+.sideBottom a:hover, .aActive {
+  background: #205a58;
+  border-color: #5DC16B;
+}
+/* middle content */
+.appContent {
+  background: #E5E5E5;
+  min-height: calc(100vh - 50px);
+  margin: 50px 0 0 0px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+/* options start */
+.options-top {
+  background: #fff;
+  margin: -30px -30px 20px;
+  padding: 12px 10px 8px;
+  box-shadow: 0px 0px 7px -5px #000;
+}
+.options-top ul {
+  margin-bottom: 0;
+}
+.options-top ul li {
+  display: inline-block;
+}
+.reload-icon {
+  color: #5CC16B;
+}
+.reload-icon {
+  color: #028B7B !important;
+}
+/* video part start */
+.video-part .video, .video-part .result {
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 1rem;
+}
+.video-part .video .inner {
+  width: 100%;
+  min-height: 330px;
+  background: #F7F9F6;
+  position: relative;
+}
+#test {
+  display: flex;
+  justify-content: center;
+}
+#video-frame {
+  position: relative;
+}
+.video-part .video .inner canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.video-part .result ul {
+  background: #F7F9F6;
+  margin-bottom: 0;
+}
+.video-part .result ul li {
+  padding: 5px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.video-part .result .text {
+  color: rgb(116, 116, 116);
+}
+.video-part .result .text span {
+  padding-bottom: 3px;
+}
+.video-part .video .inner {
+  border-radius: 5px;
+  border: 1px solid #2E5777;
+}
+.video-part .result ul {
+  border: 1px solid #FF9F8F;
+  border-radius: 5px;
+}
+
+
+/* custom media queires */
+@media (min-width: 767px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+  #sideMnu {
+    width: 230px ;
+    z-index: 1;
+  }
+  #appcontnt {
+    margin-left: 230px !important;
+  }
+}
+@media (max-width: 991px) {
+  .topnav-breadcrumb {
+    display: none;
+  }
+  .options-top ul li {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1rem 0rem !important;
+    z-index: 100;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .brndHide {
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  .navSearch {
+    display: none;
+  }
+}
